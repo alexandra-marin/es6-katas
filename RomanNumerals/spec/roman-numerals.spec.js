@@ -19,12 +19,16 @@ describe("RomanNumerals", function() {
     });
 
     it("should return added digits", function() {
-        numerals.get(2).should.be.exactly("II");
-        numerals.get(3).should.be.exactly("III");
-        numerals.get(7).should.be.exactly("VII");
-        numerals.get(8).should.be.exactly("VIII");
-        numerals.get(11).should.be.exactly("XI");
-        numerals.get(153).should.be.exactly("CLIII");
-        // numerals.get(1553).should.be.exactly("MDLIII");
+        numerals.get(2)   .should.be.exactly("II");
+        numerals.get(3)   .should.be.exactly("III");
+        numerals.get(7)   .should.be.exactly("VII");
+        numerals.get(8)   .should.be.exactly("VIII");
+        numerals.get(11)  .should.be.exactly("XI");
+        numerals.get(152) .should.be.exactly("CLII");
+        numerals.get(153) .should.be.exactly("CLIII");
+        numerals.get(1550).should.be.exactly("MDL");
+        numerals.get(1560).should.be.exactly("MDLX");
+        numerals.get(1551).should.be.exactly("MDLI");
+        numerals.get(1553).should.be.exactly("MDLIII");
     });
 });

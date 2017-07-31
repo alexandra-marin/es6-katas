@@ -19,18 +19,25 @@ export class RomanNumerals {
 
 	compute(number) {
 		var result = "";
-		var firstLower = Object.keys(numerals).reverse().find(x => x < number);
-		result += numerals[firstLower];
-		var difference = number - firstLower;
+		var firstLower;
 
-		if (difference > 1) {
-			firstLower = Object.keys(numerals)
-				.reverse()
-				.find(x => x < difference);
+		while (number > 1) {
+			firstLower = this.getFirstLowerThan(number);
 			result += numerals[firstLower];
-			difference = difference - firstLower;
+            
+            number = number - firstLower;
+            if (numerals.hasOwnProperty(number)) {
+                result += numerals[number];
+                break;
+            }
 		}
 
-		return result + numerals[1].repeat(difference);
-	}
+		return result;
+    }
+    
+    getFirstLowerThan(number) {
+        return Object.keys(numerals)
+				.reverse()
+				.find(x => x < number);
+    }
 }
