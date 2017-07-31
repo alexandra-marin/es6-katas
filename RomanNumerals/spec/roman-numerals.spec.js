@@ -10,5 +10,10 @@ describe("RomanNumerals", function() {
 	it("should return I for 1", function() {
 		var number = numerals.get(1);
 		expect(number).toBe("I");
+    });
+    
+    it("should return V for 5", function() {
+		var number = numerals.get(5);
+		expect(number).toBe("V");
 	});
 });
