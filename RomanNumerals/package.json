@@ -13,7 +13,9 @@
     "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-webpack": "^1.6.0",
-    "webpack": "^1.15.0"
+    "should": "^11.2.1",
+    "webpack": "^1.15.0",
+    "karma-should": "^1.0.0"
   },
   "scripts": {
     "test": "test"

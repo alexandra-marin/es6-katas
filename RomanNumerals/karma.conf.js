@@ -1,11 +1,11 @@
 module.exports = function(config) {
 	config.set({
-		frameworks: ["jasmine"],
+		frameworks: ["jasmine", "should"],
 		files: ["spec/*.js"],
 		browsers: ["Chrome"],
 		preprocessors: {
 			"spec/**/*.js": ["webpack"]
-        },
+		},
 		webpack: {
 			module: {
 				loaders: [
