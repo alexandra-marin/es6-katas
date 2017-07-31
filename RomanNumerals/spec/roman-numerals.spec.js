@@ -8,7 +8,7 @@ describe("RomanNumerals", function() {
         numerals = new RomanNumerals();
     });
 
-	it("should return single digits", function() {
+	it("should return single digits representation", function() {
         numerals.get(1)   .should.be.exactly("I");
         numerals.get(5)   .should.be.exactly("V");
         numerals.get(10)  .should.be.exactly("X");
@@ -18,7 +18,7 @@ describe("RomanNumerals", function() {
         numerals.get(1000).should.be.exactly("M");
     });
 
-    it("should return added digits", function() {
+    it("should return added digits representation", function() {
         numerals.get(2)   .should.be.exactly("II");
         numerals.get(3)   .should.be.exactly("III");
         numerals.get(7)   .should.be.exactly("VII");
@@ -30,5 +30,8 @@ describe("RomanNumerals", function() {
         numerals.get(1560).should.be.exactly("MDLX");
         numerals.get(1551).should.be.exactly("MDLI");
         numerals.get(1553).should.be.exactly("MDLIII");
+    });
+
+    it("should return subtracted digits representation", function() {
     });
 });
