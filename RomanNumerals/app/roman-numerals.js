@@ -13,7 +13,14 @@ export class RomanNumerals {
 		if (numerals.hasOwnProperty(number)) {
 			return numerals[number];
 		} else {
-			return "II";
+			return this.compute(number);
 		}
+	}
+
+	compute(number) {
+        var firstLower = Object.keys(numerals).find(x => x < number);
+        var difference = number - firstLower;
+        
+        return numerals[firstLower] + numerals[firstLower].repeat(difference);
 	}
 }
