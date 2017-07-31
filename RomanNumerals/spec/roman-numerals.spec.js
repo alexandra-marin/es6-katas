@@ -17,4 +17,8 @@ describe("RomanNumerals", function() {
         numerals.get(500) .should.be.exactly("D");
         numerals.get(1000).should.be.exactly("M");
     });
+
+    it("should return added digits", function() {
+        numerals.get(2).should.be.exactly("II");
+    });
 });
