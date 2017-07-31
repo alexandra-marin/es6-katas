@@ -33,5 +33,8 @@ describe("RomanNumerals", function() {
     });
 
     it("should return subtracted digits representation", function() {
+        numerals.get(4).should.be.exactly("IV");
+        numerals.get(49).should.be.exactly("XLIX");
+        numerals.get(1649).should.be.exactly("MDCXLIX");
     });
 });
