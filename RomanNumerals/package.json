@@ -18,7 +18,7 @@
     "karma-should": "^1.0.0"
   },
   "scripts": {
-    "test": "test"
+    "test": "karma start"
   },
   "author": "Alexandra Marin",
   "license": "ISC"
