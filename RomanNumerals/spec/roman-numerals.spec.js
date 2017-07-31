@@ -8,13 +8,13 @@ describe("RomanNumerals", function() {
         numerals = new RomanNumerals();
     });
 
-	it("should return I for 1", function() {
-        var number = numerals.get(1);
-        number.should.be.exactly("I");
+	it("should return single digits", function() {
+        numerals.get(1)   .should.be.exactly("I");
+        numerals.get(5)   .should.be.exactly("V");
+        numerals.get(10)  .should.be.exactly("X");
+        numerals.get(50)  .should.be.exactly("L");
+        numerals.get(100) .should.be.exactly("C");
+        numerals.get(500) .should.be.exactly("D");
+        numerals.get(1000).should.be.exactly("M");
     });
-    
-    it("should return V for 5", function() {
-		var number = numerals.get(5);
-        number.should.be.exactly("V");
-	});
 });
