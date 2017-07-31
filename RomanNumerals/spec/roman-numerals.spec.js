@@ -21,8 +21,10 @@ describe("RomanNumerals", function() {
     it("should return added digits", function() {
         numerals.get(2).should.be.exactly("II");
         numerals.get(3).should.be.exactly("III");
-        // numerals.get(7).should.be.exactly("VII");
-        // numerals.get(8).should.be.exactly("VIII");
-        // numerals.get(11).should.be.exactly("XII");
+        numerals.get(7).should.be.exactly("VII");
+        numerals.get(8).should.be.exactly("VIII");
+        numerals.get(11).should.be.exactly("XI");
+        numerals.get(153).should.be.exactly("CLIII");
+        // numerals.get(1553).should.be.exactly("MDLIII");
     });
 });
